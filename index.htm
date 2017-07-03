@@ -7,6 +7,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <!--PQ Grid files-->
     <link rel="stylesheet" href="pqgrid.min.css" />
+    <link  rel='stylesheet'  href="pqgrid.rtl.css"/>
+	
     <script src="pqgrid.min.js"></script>
 <!--PQ Grid Office theme-->
     <link rel="stylesheet" href="themes/office/pqgrid.css" />
@@ -35,7 +37,28 @@
 			[20, 'American Intl. Group', '108,905.0', '10,477.0']];
 
 
-        var obj = { width: 700, height: 400, title: "ParamQuery Grid Example",resizable:true,draggable:true };
+        var obj = { 
+		width: 700, 
+		height: 400, 
+		title: "ParamQuery Grid Example",
+		resizable:true,
+		draggable:true,
+		direction: "righttoleft",
+		toolbar: {
+						cls: 'pq-toolbar-export',
+						items: [{
+								type: 'button',
+								label: "Export to Excel",
+								icon: 'ui-icon-document',
+								listeners: [{
+									"click": function (evt) {
+										$("#grid_array").pqGrid("exportExcel", { url: "https://paramquery.com/pro/demos/excel", sheetName: "pqGrid sheet" });
+									}
+								}]
+						}]
+					},
+
+		};
         obj.colModel = [{ title: "Rank", width: 100, dataType: "integer" },
         { title: "Company", width: 200, dataType: "string" },
         { title: "Revenues ($ millions)", width: 150, dataType: "float", align: "right" },
