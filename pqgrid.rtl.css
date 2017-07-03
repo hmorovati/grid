@@ -1,0 +1,60 @@
+// RTL by Hamed Morovati
+.pq-header-outer {
+    text-align: right;
+}
+
+.pq-grid-header-table>tbody>tr>.pq-grid-col {
+    border-width: 0 0px 1px 1px;
+}
+
+.pq-grid-header-table>tbody>tr>.pq-grid-col:first-child, .pq-grid-table>tbody>tr>.pq-grid-col:first-child {
+    border-right: 0;
+	border-left: 1px solid;
+}
+
+.pq-grid-cont-inner {
+     left: inherit;
+	 right: 0px;
+}
+
+.pq-grid-number-col {
+    border-left: 1px solid #cfcfcf;
+	border-right: 0px;
+    padding: 4px 5px;
+    text-align: right;
+}
+
+div.pq-vscroll {
+    left: 0;
+	right: inherit;
+ }
+ 
+ .pq-grid-cell.pq-group-title-cell * {
+    text-align: right;
+}
+
+/*.pq-group-menu {
+    float: left;
+ }
+ */
+/*.pq-group-item {    
+    float: right;
+ }*/
+ 
+ div.pq-grid * {
+	text-align: right;
+}
+
+.ui-menu .ui-widget .ui-widget-content .ui-front{
+  left:100px;
+  display:none;
+}
+
+.pq-group-item {
+    
+     float: inherit;
+}
+
+.pq-group-title-cell .pq-group-icon {
+    margin: -2px 0px -2px 3px;
+}
